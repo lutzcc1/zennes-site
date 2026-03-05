@@ -571,13 +571,28 @@ button {
 
 /* Connector line */
 .process__connector {
-  width: 1px;
-  align-self: stretch;
-  min-height: 80px;
-  background: linear-gradient(180deg, transparent, var(--accent) 50%, transparent);
+  height: 1px;
+  width: 40px;
+  align-self: center;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
   opacity: 0.3;
   flex-shrink: 0;
-  /* On desktop this is a vertical divider between horizontal steps */
+}
+
+.process__result {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: rgba(15, 204, 206, 0.04);
+}
+
+.process__result-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  color: var(--accent);
 }
 
 /* ============================================================
@@ -1007,12 +1022,10 @@ button {
   }
 
   .process__connector {
-    display: block;
     width: 1px;
-    min-height: 40px;
     height: 40px;
-    align-self: auto;
     margin-left: 2.5rem;
+    background: linear-gradient(180deg, transparent, var(--accent), transparent);
   }
 
   .process__step {
