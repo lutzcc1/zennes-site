@@ -581,6 +581,71 @@ button {
 }
 
 /* ============================================================
+   FAQ
+   ============================================================ */
+.faq {
+  padding: var(--section-spacing) 0;
+}
+
+.faq__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+.faq__list {
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  max-width: 720px;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq__question {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 1.25rem 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color var(--transition-base);
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--accent);
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq__item[open] .faq__question::after {
+  content: '-';
+}
+
+.faq__question:hover {
+  color: var(--accent);
+}
+
+.faq__answer {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding-bottom: 1.25rem;
+}
+
+/* ============================================================
    CONTACT
    ============================================================ */
 .contact {
