@@ -134,6 +134,14 @@ button {
   color: var(--accent);
 }
 
+.nav__cta {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
 /* Hamburger */
 .nav__hamburger {
   display: none;
@@ -705,6 +713,13 @@ button {
 
   .nav__links.is-open {
     display: flex;
+  }
+
+  .nav__cta {
+    margin-left: 0;
+    margin-right: 0.5rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
   }
 
   /* Hero */
