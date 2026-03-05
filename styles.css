@@ -148,8 +148,8 @@ button {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
 }
 
 .nav__hamburger-line {
@@ -291,7 +291,7 @@ button {
 
 .btn--solid {
   background: var(--accent);
-  color: var(--text-primary);
+  color: var(--bg);
   border: 1px solid var(--accent);
 }
 
@@ -811,6 +811,7 @@ button {
 .form__input:focus {
   outline: none;
   border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(15, 204, 206, 0.3);
 }
 
 .form__textarea {
