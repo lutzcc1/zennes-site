@@ -852,6 +852,40 @@ button {
   color: var(--text-secondary);
 }
 
+.footer__link {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-base);
+}
+
+.footer__link:hover {
+  color: var(--accent);
+}
+
+/* ============================================================
+   FLOATING WHATSAPP
+   ============================================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
 /* ============================================================
    HERO KEYFRAMES
    ============================================================ */
@@ -1054,6 +1088,19 @@ button {
   .form__submit {
     align-self: stretch;
     justify-content: center;
+  }
+
+  /* WhatsApp float */
+  .whatsapp-float {
+    bottom: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
   }
 
   /* Footer */
