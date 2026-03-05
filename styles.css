@@ -991,6 +991,82 @@ button {
 }
 
 /* ============================================================
+   IDEAL CUSTOMER
+   ============================================================ */
+.ideal {
+  padding: var(--section-spacing) 0;
+}
+
+.ideal__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.ideal__col {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: 8px;
+}
+
+.ideal__col--yes {
+  background: rgba(15, 204, 206, 0.05);
+  border: 1px solid rgba(15, 204, 206, 0.2);
+}
+
+.ideal__col--no {
+  background: rgba(255, 100, 100, 0.03);
+  border: 1px solid rgba(255, 100, 100, 0.15);
+}
+
+.ideal__heading {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.ideal__heading--yes {
+  color: var(--accent);
+}
+
+.ideal__heading--no {
+  color: #FF6B6B;
+}
+
+.ideal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.ideal__item {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.ideal__item::before {
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.ideal__item--yes::before {
+  content: '\2713';
+  color: var(--accent);
+}
+
+.ideal__item--no::before {
+  content: '\2717';
+  color: #FF6B6B;
+}
+
+/* ============================================================
    RESPONSIVE — TABLET (768px - 1023px)
    ============================================================ */
 @media (max-width: 1023px) {
@@ -1110,6 +1186,10 @@ button {
   .services__grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .ideal__inner {
+    grid-template-columns: 1fr;
   }
 
   /* Process */
