@@ -483,6 +483,31 @@ button {
 }
 
 /* ============================================================
+   MID-PAGE CTA
+   ============================================================ */
+.mid-cta {
+  padding: 4rem 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.mid-cta__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+.mid-cta__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================================
    PROCESS (How It Works)
    ============================================================ */
 .process {
