@@ -94,7 +94,7 @@ button {
   background: rgba(15, 13, 10, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(196, 87, 42, 0.2);
   animation: nav-slide-down 0.8s var(--ease-out-expo) both;
 }
 
@@ -230,7 +230,7 @@ button {
   letter-spacing: -0.03em;
   font-variation-settings: 'opsz' 144;
   /* Gradient text */
-  background: linear-gradient(135deg, var(--accent-highlight) 0%, var(--accent) 40%, var(--accent-secondary) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-highlight) 50%, var(--accent-secondary) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
