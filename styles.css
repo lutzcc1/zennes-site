@@ -315,6 +315,14 @@ button {
   transform: scale(1.02);
 }
 
+.btn__micro {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
 /* ============================================================
    DIVIDER
    ============================================================ */
@@ -504,7 +512,20 @@ button {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 600;
   color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.mid-cta__subtext {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
+}
+
+.mid-cta__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* ============================================================
@@ -768,14 +789,51 @@ button {
 /* ============================================================
    CONTACT FORM
    ============================================================ */
-.contact__whatsapp {
-  margin-top: 2rem;
+.contact__wa-btn {
+  margin-top: 1.5rem;
 }
 
-.contact__whatsapp-label {
+.contact__next-steps {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.contact__next-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.contact__next-list {
+  list-style: none;
+  counter-reset: steps;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact__next-list li {
+  counter-increment: steps;
   font-size: 0.9375rem;
   color: var(--text-secondary);
-  margin-bottom: 0.75rem;
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.contact__next-list li::before {
+  content: counter(steps) ".";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.form__alt-label {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
 }
 
 .contact__form {
@@ -988,6 +1046,94 @@ button {
   color: var(--text-primary);
   font-style: italic;
   line-height: 1.6;
+}
+
+/* ============================================================
+   CASE STUDY
+   ============================================================ */
+
+.case-study {
+  padding: var(--section-spacing) 0;
+}
+
+.case-study__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+.case-study__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+
+.case-study__client {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.case-study__block {
+  margin-bottom: 1.5rem;
+}
+
+.case-study__label {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.case-study__text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.case-study__results {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.case-study__metrics {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.case-study__metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.case-study__number {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.case-study__desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .case-study__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 /* ============================================================
