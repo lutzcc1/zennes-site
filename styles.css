@@ -1094,6 +1094,21 @@ button {
   max-width: var(--content-max);
   margin: 0 auto;
   padding: 0 var(--content-padding);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.founder__photo {
+  width: clamp(140px, 18vw, 200px);
+  height: clamp(140px, 18vw, 200px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--border);
+  box-shadow: 0 0 0 4px var(--bg-alt), 0 0 24px rgba(15, 204, 206, 0.1);
+  flex-shrink: 0;
 }
 
 .founder__text {
@@ -1514,6 +1529,13 @@ button {
 
   .ideal__inner {
     grid-template-columns: 1fr;
+  }
+
+  /* Founder */
+  .founder__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 
   /* Case study */
