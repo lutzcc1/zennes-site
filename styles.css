@@ -692,10 +692,31 @@ button {
   max-width: var(--content-max);
   margin: 0 auto;
   padding: 0 var(--content-padding);
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.founder__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
 }
 
 .founder__text {
   max-width: 640px;
+}
+
+@media (max-width: 768px) {
+  .founder__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .founder__bio {
