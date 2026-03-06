@@ -19,6 +19,25 @@ const revealObserver = new IntersectionObserver(
 
 revealElements.forEach((el) => revealObserver.observe(el));
 
+// ── Case Study Number Pop Animation ──────────────────────────
+const numberElements = document.querySelectorAll('.case-study__number[data-animate]');
+
+const numberObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('is-visible');
+        }, index * 150);
+        numberObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+
+numberElements.forEach((el) => numberObserver.observe(el));
+
 // ── Mobile Hamburger Toggle ─────────────────────────────────
 navToggle.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('is-open');
