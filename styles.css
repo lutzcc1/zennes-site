@@ -21,7 +21,7 @@
   --accent-warm-highlight: #F0BE4F;
   --negative: #FF6B6B;
 
-  --font-heading: 'Clash Display', sans-serif;
+  --font-heading: 'Switzer', sans-serif;
   --font-body: 'General Sans', sans-serif;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -1104,6 +1104,7 @@ button {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%;
   flex-shrink: 0;
 }
 

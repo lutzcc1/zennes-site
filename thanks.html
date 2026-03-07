@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias | Zennes</title>
+  <meta name="robots" content="noindex">
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .thanks {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem var(--content-padding);
+      position: relative;
+    }
+
+    .thanks__icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(15, 204, 206, 0.1);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      animation: scaleIn 0.5s var(--ease-out-expo) both;
+    }
+
+    .thanks__icon svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--accent);
+      animation: drawCheck 0.4s ease-out 0.3s both;
+    }
+
+    @keyframes scaleIn {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes drawCheck {
+      from { stroke-dashoffset: 24; opacity: 0; }
+      to { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    .thanks__heading {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      animation: fadeUp 0.5s var(--ease-out-expo) 0.2s both;
+    }
+
+    .thanks__desc {
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      color: var(--text-secondary);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.5s var(--ease-out-expo) 0.35s both;
+    }
+
+    .thanks__desc strong {
+      color: var(--accent);
+    }
+
+    .thanks__actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeUp 0.5s var(--ease-out-expo) 0.5s both;
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(16px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPM9BBRP84"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JPM9BBRP84');
+  </script>
+</head>
+<body>
+
+  <main class="thanks">
+    <div class="thanks__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="5 13 10 18 19 6" stroke-dasharray="24" />
+      </svg>
+    </div>
+    <h1 class="thanks__heading">Recibimos tu mensaje</h1>
+    <p class="thanks__desc">Te contactaremos en las próximas <strong>24 horas</strong> para agendar tu diagnóstico gratuito.</p>
+    <div class="thanks__actions">
+      <a href="/" class="btn btn--solid">Volver al inicio</a>
+      <a href="https://wa.me/525513570864?text=Hola%2C%20acabo%20de%20enviar%20el%20formulario%20y%20me%20gustar%C3%ADa%20agendar%20mi%20diagn%C3%B3stico." class="btn btn--outline" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </main>
+
+  <div class="grain" aria-hidden="true"></div>
+</body>
+</html>
