@@ -356,23 +356,10 @@
           </ol>
         </div>
       </div>
-      <form class="contact__form" action="https://formspree.io/f/mreyzbld" method="POST">
+      <div class="contact__form">
         <p class="form__alt-label">¿Prefieres dejarnos tus datos?</p>
-        <div class="form__group">
-          <label class="form__label" for="name">Nombre</label>
-          <input class="form__input" type="text" id="name" name="name" required>
-        </div>
-        <div class="form__group">
-          <label class="form__label" for="contact">WhatsApp o Email</label>
-          <input class="form__input" type="text" id="contact" name="contact" placeholder="Tu número de WhatsApp o correo" required>
-        </div>
-        <div class="form__group">
-          <label class="form__label" for="challenge">¿Cuál es tu mayor reto operativo?</label>
-          <textarea class="form__input form__textarea" id="challenge" name="challenge" rows="3" placeholder="Ejemplo: Mi equipo pierde 3 horas diarias confirmando citas por teléfono"></textarea>
-        </div>
-        <button class="btn btn--solid form__submit" type="submit">Quiero mi diagnóstico gratuito</button>
-        <span class="btn__micro">Sin costo · Sin compromiso · 30 minutos</span>
-      </form>
+        <iframe data-tally-src="https://tally.so/embed/68kr4Y?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="270" frameborder="0" marginheight="0" marginwidth="0" title="Agenda tu diagnóstico gratuito"></iframe>
+      </div>
     </div>
   </section>
 
@@ -394,5 +381,6 @@
   <div class="grain" aria-hidden="true"></div>
 
   <script src="main.js" defer></script>
+  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </body>
 </html>
